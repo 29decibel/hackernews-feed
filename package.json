@@ -16,5 +16,11 @@
     "rss"
   ],
   "author": "mike li",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "cheerio": "~0.11.0",
+    "request": "~2.21.0",
+    "readability": "~0.1.0",
+    "underscore": "~1.4.4"
+  }
 }
