@@ -9,10 +9,12 @@ describe("ReadableLinks", function(){
 
   it("#attach readable article text/html", function(done){
 
-    var resultLinks = ReadableLinks.attach(links);
-    assert.notEqual(null, resultLinks[0].text);
-    assert.notEqual(null, resultLinks[0].html);
+    ReadableLinks.parse(links, function(resultLinks){
 
-    done();
+      assert.notEqual(null, resultLinks[0].text);
+      assert.notEqual(null, resultLinks[0].html);
+      done();
+    });
+
   });
 });
