@@ -25,3 +25,5 @@ $ heroku open
 
 ```
 
+## Thanks
+* https://github.com/fb55/readabilitySAX
