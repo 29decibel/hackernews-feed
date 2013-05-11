@@ -26,6 +26,7 @@
     "hiredis": "~0.1.15",
     "async": "~0.2.8",
     "readabilitySAX": "~1.6.1",
-    "htmlparser2": "~3.0.5"
+    "htmlparser2": "~3.0.5",
+    "should": "~1.2.2"
   }
 }

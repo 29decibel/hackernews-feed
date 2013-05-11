@@ -1,10 +1,20 @@
-var assert = require("assert");
+var assert = require("assert"),
+    should = require("should"),
+    LinkReadability = require("../lib/link_readability").ReadableLinks,
+    PageParser = require("../lib/page_parser").PageParser;
 
-describe('Array', function(){
-  describe('#indexOf()', function(){
-    it('should return -1 when the value is not present', function(){
-      assert.equal(-1, [1,2,3].indexOf(5));
-      assert.equal(-1, [1,2,3].indexOf(0));
-    })
+describe('RssGenerator', function(){
+  describe('feeds', function(){
+
+    it('should return the feeds ', function(done){
+      var page_parser = new PageParser();
+      page_parser.getLinks(function(links){
+        LinkReadability.parse(links, function(resultLinks){
+          resultLinks.length.should.above(20);
+          done();
+        });
+      });
+    });
+
   })
 })
