@@ -5,6 +5,23 @@
 * a RSS generator to generate the rss from the previous result
 * heroku friendly
 
+![hackernews-feeed](http://flic.kr/p/eigK13)
 
-## TODO
-* using Reedr to do a screenshot
+## Deploy to heroku
+```bash
+$ git clone git://github.com/29decibel/hackernews-feed.git
+
+$ cd hackernews-feed
+
+$ heroku create
+
+$ git push heroku master
+
+# add redis support
+$ heroku addons:add redistogo
+
+# go enjoy your hacker news feed
+$ heroku open
+
+```
+
