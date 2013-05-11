@@ -5,6 +5,7 @@
 * a RSS generator to generate the rss from the previous result
 * heroku friendly
 
+## What it would look like in Feedly
 ![ScreenShot](http://29decibel.github.com/hackernews-feed/images/hackernews-feed.png)
 
 ## Deploy to heroku
