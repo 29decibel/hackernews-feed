@@ -27,6 +27,7 @@
     "async": "~0.2.8",
     "readabilitySAX": "~1.6.1",
     "htmlparser2": "~3.0.5",
-    "should": "~1.2.2"
+    "should": "~1.2.2",
+    "rss": "0.0.4"
   }
 }
