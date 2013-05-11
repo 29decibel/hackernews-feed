@@ -15,10 +15,10 @@ $ cd hackernews-feed
 
 $ heroku create
 
-$ git push heroku master
-
 # add redis support
 $ heroku addons:add redistogo
+
+$ git push heroku master
 
 # go enjoy your hacker news feed
 $ heroku open
