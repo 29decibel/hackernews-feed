@@ -5,7 +5,7 @@
 * a RSS generator to generate the rss from the previous result
 * heroku friendly
 
-![hackernews-feeed](http://flic.kr/p/eigK13)
+![ScreenShot](http://29decibel.github.com/hackernews-feed/images/hackernews-feed.png)
 
 ## Deploy to heroku
 ```bash
