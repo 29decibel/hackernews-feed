@@ -10,6 +10,7 @@ app.get('/', function(req, res) {
   rss.feeds(function(feeds){
     res.charset = 'UTF-8';
     res.header('Content-Type', 'text/xml');
+    res.header('Last-Modified', new Date().toString());
     res.header('Cache-Control', 'no-cache');
     res.send(feeds);
   });
