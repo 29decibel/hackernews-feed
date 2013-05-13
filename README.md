@@ -8,6 +8,9 @@
 ## What it would look like in Feedly
 ![ScreenShot](http://29decibel.github.com/hackernews-feed/images/hackernews-feed.png)
 
+## Here is the result
+[HN RSS](http://hackernews-rss.herokuapp.com)
+
 ## Deploy to heroku
 ```bash
 $ git clone git://github.com/29decibel/hackernews-feed.git
