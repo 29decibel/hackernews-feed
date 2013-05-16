@@ -5,6 +5,7 @@ var assert = require("assert"),
     RssGenerator = require("../lib/rss_generator").RssGenerator;
 
 describe('RssGenerator', function(){
+
   describe('feeds', function(){
 
     it('should return the feeds ', function(done){
@@ -22,6 +23,23 @@ describe('RssGenerator', function(){
       rssGenerator.feeds(function(feeds){
 
         feeds.length.should.above(20);
+        done();
+      });
+    });
+
+    it("should get the readable content of https pages", function(done){
+      // mock the links
+      PageParser.prototype.getLinks = function(callback){
+        var mockLinks = [{title: 'https test', url:"https://github.com/mikeal/request"}];
+        // always run the callback in the next event loop
+        setTimeout(callback(mockLinks), 0);
+      }
+
+      // doing test here
+      var rssGenerator = new RssGenerator();
+      rssGenerator.feeds(function(feeds){
+
+        //feeds.indexOf("Super simple to use").should.above(0);
         done();
       });
     });

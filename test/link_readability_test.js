@@ -1,5 +1,8 @@
 var ReadableLinks = require("../lib/link_readability").ReadableLinks,
-    assert = require("assert");
+    assert = require("assert"),
+    fs = require('fs'),
+    Readability = require("readabilitySAX").Readability,
+    Parser = require("htmlparser2/lib/Parser.js");
 
 
 describe("ReadableLinks", function(){
@@ -10,11 +13,10 @@ describe("ReadableLinks", function(){
   it("#attach readable article text/html", function(done){
 
     ReadableLinks.parse(links, function(resultLinks){
-
-      assert.notEqual(null, resultLinks[0].text);
       assert.notEqual(null, resultLinks[0].html);
       done();
     });
 
   });
+
 });
