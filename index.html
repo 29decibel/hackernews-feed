@@ -1,34 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <title>Hackernews-feed by 29decibel</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Hackernews-feed</h1>
-        <h2>minimal Hacker News front page feed provider</h2>
-        <a href="https://github.com/29decibel/hackernews-feed" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h2>Hacker news RSS feed</h2>
+      <header>
+        <h1>Hackernews-feed</h1>
+        <p>minimal Hacker News front page feed provider</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/29decibel/hackernews-feed" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/29decibel/hackernews-feed/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/29decibel/hackernews-feed/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h2>
+<a name="hacker-news-rss-feed" class="anchor" href="#hacker-news-rss-feed"><span class="octicon octicon-link"></span></a>Hacker news RSS feed</h2>
 
 <ul>
 <li>a url parser to parse the urls of main page</li>
@@ -36,44 +48,48 @@
 <li>using redis to cache the parsed article</li>
 <li>a RSS generator to generate the rss from the previous result</li>
 <li>heroku friendly</li>
-</ul><p><img src="http://29decibel.github.com/hackernews-feed/images/hackernews-feed.png" alt="ScreenShot"></p>
+</ul><h2>
+<a name="what-it-would-look-like-in-feedly" class="anchor" href="#what-it-would-look-like-in-feedly"><span class="octicon octicon-link"></span></a>What it would look like in Feedly</h2>
 
-<h2>Deploy to heroku</h2>
+<p><img src="http://29decibel.github.com/hackernews-feed/images/hackernews-feed.png" alt="ScreenShot"></p>
 
-<div class="highlight"><pre><span class="nv">$ </span>git clone git://github.com/29decibel/hackernews-feed.git
+<h2>
+<a name="here-is-the-result" class="anchor" href="#here-is-the-result"><span class="octicon octicon-link"></span></a>Here is the result</h2>
+
+<p><a href="http://hackernews-rss.herokuapp.com">HN RSS</a></p>
+
+<h2>
+<a name="deploy-to-heroku" class="anchor" href="#deploy-to-heroku"><span class="octicon octicon-link"></span></a>Deploy to heroku</h2>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>git clone git://github.com/29decibel/hackernews-feed.git
 
 <span class="nv">$ </span><span class="nb">cd </span>hackernews-feed
 
 <span class="nv">$ </span>heroku create
 
-<span class="nv">$ </span>git push heroku master
-
 <span class="c"># add redis support</span>
 <span class="nv">$ </span>heroku addons:add redistogo
+
+<span class="nv">$ </span>git push heroku master
 
 <span class="c"># go enjoy your hacker news feed</span>
 <span class="nv">$ </span>heroku open
 
 </pre></div>
-        </section>
 
-        <aside id="sidebar">
-          <a href="https://github.com/29decibel/hackernews-feed/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/29decibel/hackernews-feed/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
+<h2>
+<a name="thanks" class="anchor" href="#thanks"><span class="octicon octicon-link"></span></a>Thanks</h2>
 
-          <p class="repo-owner"><a href="https://github.com/29decibel/hackernews-feed"></a> is maintained by <a href="https://github.com/29decibel">29decibel</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+<ul>
+<li><a href="https://github.com/fb55/readabilitySAX">https://github.com/fb55/readabilitySAX</a></li>
+</ul>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/29decibel">29decibel</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
     </div>
-
-  
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
   </body>
 </html>
